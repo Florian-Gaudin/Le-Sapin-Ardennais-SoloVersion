@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Le Sapin Ardennais</title>
+        <link rel="stylesheet" type="text/css" href="slider test.css">
+    </head>
+
+    <body>
+
+
+<div  id="promotions">
+    <div class="slideshow-container">
+
+        <h4>Promotions du moment !<br><br></h4>
+
+        <div class="mySlides fade">
+            <img src="promo4.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="promo1bis.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="promo2.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="promo3bis.jpg" style="width:100%">
+        </div>
+
+        <div style="text-align:center">
+          <br><br>
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <br><br>
+          <a href="produits.html"><button><span><img src="sapin_button.png" width="15" weight="15">Aller à la boutique</span></button></a><br><br><br><br>
+        </div>
+
+    </div>
+    <!-- SLIDER -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 8000); // Change image every 2 seconds
+        }
+        </script>
+</div>
+
+
+<span id="sl_play" class="sl_command"></span>
+<span id="sl_pause" class="sl_command"></span>
+ 
+<span id="sl_i1" class="sl_command sl_i"></span>
+<span id="sl_i2" class="sl_command sl_i"></span>
+<span id="sl_i3" class="sl_command sl_i"></span>
+<span id="sl_i4" class="sl_command sl_i"></span>
+
+<section id="slideshow">
+		
+    
+	<div class="container">
+		<div class="c_slider"></div>
+		<div class="slider">
+			<figure>
+				<img src="promo1bis.jpg" alt="" width="640" height="310" />
+				<figcaption>The mirror of soul</figcaption>
+
+			</figure><!--
+			--><figure>
+				<img src="promo2.jpg" alt="" width="640" height="310" />
+				<figcaption>Let's cross that bridge when we come to it</figcaption>
+			</figure><!--
+			--><figure>
+				<img src="promo3bis.jpg" alt="" width="640" height="310" />
+				<figcaption>Sushi<em>(do)</em> time</figcaption>
+
+			</figure><!--
+			--><figure>
+				<img src="promo4.jpg" alt="" width="640" height="310" />
+				<figcaption>Waking Life</figcaption>
+			</figure>
+		</div>
+	</div>
+    <a class="play_commands pause" href="#sl_pause" title="Maintain paused">Pause</a>
+    <a class="play_commands play" href="#sl_play" title="Play the animation">Play</a>
+	<a class="commands prev commands1" href="#sl_i4" title="Aller à la dernière slide">&lt;</a>
+<a class="commands next commands1" href="#sl_i2" title="Aller à la 2ème slide">&gt;</a>
+<a class="commands prev commands2" href="#sl_i1" title="Aller à la 1ère slide">&lt;</a>
+<a class="commands next commands2" href="#sl_i3" title="Aller à la 3ème slide">&gt;</a>
+<a class="commands prev commands3" href="#sl_i2" title="Aller à la 2ème slide">&lt;</a>
+<a class="commands next commands3" href="#sl_i4" title="Aller à la 4ème slide">&gt;</a>
+<a class="commands prev commands4" href="#sl_i3" title="Aller à la 3ème slide">&lt;</a>
+<a class="commands next commands4" href="#sl_i1" title="Aller à la 1ère slide">&gt;</a>
+    <span id="timeline"></span>
+
+    <ul class="dots_commands"><!--
+	--><li><a title="Afficher la slide 1" href="#sl_i1">Slide 1</a></li><!--
+	--><li><a title="Afficher la slide 2" href="#sl_i2">Slide 2</a></li><!--
+	--><li><a title="Afficher la slide 3" href="#sl_i3">Slide 3</a></li><!--
+	--><li><a title="Afficher la slide 4" href="#sl_i4">Slide 4</a></li>
+</ul>
+</section>
+
+
+</body>
+</html>
